@@ -3,7 +3,7 @@ About pmd-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pmd-feedstock/blob/main/LICENSE.txt)
 
-Home: https://pmd.github.io
+Home: https://pmd.github.io/
 
 Package license: BSD-4-Clause AND Apache-2.0
 
