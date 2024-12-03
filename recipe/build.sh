@@ -15,6 +15,7 @@ cp -r pmd-bin-${PKG_VERSION}/* ${PREFIX}/libexec/${PKG_NAME}
 tee ${PREFIX}/bin/pmd << EOF
 exec \${CONDA_PREFIX}/libexec/pmd/bin/pmd "\$@"
 EOF
+chmod +x ${PREFIX}/bin/pmd
 
 tee ${PREFIX}/bin/pmd.cmd << EOF
 call %CONDA_PREFIX%\libexec\pmd\bin\pmd.bat %*

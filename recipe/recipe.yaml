@@ -1,17 +1,17 @@
-{% set name = "pmd" %}
-{% set version = "7.3.0" %}
+context:
+  version: 7.3.0
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: pmd
+  version: ${{ version }}
 
 source:
-  git_url: https://github.com/pmd/{{ name }}.git
-  git_rev: pmd_releases/{{ version }}
+  git: https://github.com/pmd/pmd.git
+  tag: pmd_releases/${{ version }}
 
 build:
-  noarch: generic
   number: 0
+  noarch: generic
 
 requirements:
   build:
@@ -21,18 +21,18 @@ requirements:
   run:
     - openjdk
 
-test:
-  commands:
-    - pmd --help
+tests:
+  - script:
+      - pmd --help
 
 about:
-  home: https://pmd.github.io
   license: BSD-4-Clause AND Apache-2.0
-  license_file: 
+  license_file:
     - LICENSE
     - target/generated-resources/licenses/
   summary: An extensible multilanguage static code analyzer
-  dev_url: https://github.com/pmd/pmd
+  homepage: https://pmd.github.io
+  repository: https://github.com/pmd/pmd
 
 extra:
   recipe-maintainers:
